@@ -12,4 +12,4 @@
 - Order service.
 
 
-- Live link: https://good-chef-41eb9.web.app/.
+- Live link: https://good-chef-41eb9.web.app/
