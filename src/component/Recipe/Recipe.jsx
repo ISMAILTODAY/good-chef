@@ -15,14 +15,14 @@ const Recipe = () => {
             .then(res => res.json())
             .then(data => {
                 setRecipe(data)
-                // console.log(data)
+
             })
     }, [])
     const recipeDetails = recipe.recipes;
-    // console.log(recipe)
+
     const [isNan, setIsNan] = useState(true);
     const isTure = () => {
-        // recipe.map(n => { console.log(n.method) })
+
         setIsNan(false);
     }
 
@@ -54,20 +54,23 @@ const Recipe = () => {
             </div>
             <section className='mt-5 grid md:grid-cols-3 px-10 gap-y-5'>
                 {
-                    recipeDetails && recipeDetails.map(n => <div>
+                    recipeDetails && recipeDetails.map(recipeDetail => <div>
                         <Card style={{ width: '18rem' }}>
-                            <Card.Img variant="top" src={n.pictuer} />
+                            <Card.Img variant="top" src={recipeDetail.pictuer} />
                             <Card.Body>
-                                <Card.Title>{n.recipeName}</Card.Title>
+                                <Card.Title>{recipeDetail.recipeName}</Card.Title>
                                 <Card.Text>
                                     {
-                                        n.ingredients && n.ingredients.map(m => <div>
+                                        recipeDetail.ingredients && recipeDetail.ingredients.map(ingredient => <div>
+
                                             <ul>
-                                                <li>{m}</li>
+                                                <li>{ingredient}</li>
                                             </ul>
                                         </div>)
                                     }
-                                    <p>{isNan ? n.method.slice(0, 50) : n.method}... <Link onClick={isTure}>See More</Link> </p>
+                                    <div>
+
+                                        {isNan ? recipeDetail.method.slice(0, 50) : recipeDetail.method}... <Link onClick={isTure}>See More</Link> </div>
                                     <p>Rating: <Rating
                                         placeholderSymbol={<FaStar className='text-primary'></FaStar>}
                                         emptySymbol={<FaStar></FaStar>}
