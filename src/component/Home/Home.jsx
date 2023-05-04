@@ -24,7 +24,7 @@ const Home = () => {
                     <h1 className='sub-title'><span className='title-gd' >genuine</span> happiness</h1>
 
                 </div>
-                <Image src='./../../../public/image/chinese-food.png' className='banner-img mt-5'></Image>
+                <Image src='https://i.ibb.co/2vkzHQM/chinese-food.png' className='banner-img mt-5'></Image>
             </div>
             <ChefsCard></ChefsCard>
             <section>

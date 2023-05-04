@@ -34,7 +34,7 @@ const Blog = () => {
 
 
             <div className='d-flex justify-content-center'>
-                <Pdf targetRef={ref} filename="code-example.pdf">
+                <Pdf targetRef={ref} filename="blog-question-ans.pdf">
                     {({ toPdf }) => <button className='btn btn-primary mt-5' onClick={toPdf}>Generate Pdf</button>}
                 </Pdf>
             </div>

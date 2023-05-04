@@ -27,7 +27,7 @@ const Registation = () => {
                 const user = result.user;
                 console.log(user)
                 profileUpdate(user, name, photo)
-                navigate(from);
+                navigate('/login');
             })
             .catch(erorr => {
                 console.log(erorr)

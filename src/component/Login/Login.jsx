@@ -62,9 +62,9 @@ const Login = () => {
 
     return (
         <div className=''>
-            <form onSubmit={handleSubmit} className='d-flex justify-content-center align-items-center'>
+            <form onSubmit={handleSubmit} className='d-flex justify-content-center align-items-center mt-5 '>
 
-                <div className='border px-5 mt-5 shadow-lg'>
+                <div className='border px-5 mt-5 shadow-lg bg-white rounded'>
                     <label className='my-3 d-block text-center fs-1'>Login</label>
                     <label className='d-block' htmlFor="">Email</label>
                     <input className='w-100 border-bottom p-2 d-block my-3 outline-none' type="email" name='email' placeholder='Email' required />
