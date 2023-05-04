@@ -50,14 +50,6 @@ const Recipe = () => {
                         <LazyLoad>
                             <Card.Img variant="top" src={recipe.ChefPicture} />
                         </LazyLoad>
-                        {/* <Card.Body>
-                            <Card.Title>{recipe.ChefName}</Card.Title>
-                            <Card.Text>
-                                <p>Experiencec: {recipe.YearsOfExperience} years</p>
-                                <p>Number of Recipes: {recipe.NumbersOfRecipes}</p>
-                                <p> Likes: {recipe.Likes}</p>
-                            </Card.Text>
-                        </Card.Body> */}
                     </Card>
                 </div>
             </div>
