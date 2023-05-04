@@ -25,8 +25,7 @@ const Recipe = () => {
         // recipe.map(n => { console.log(n.method) })
         setIsNan(false);
     }
-    // const [ingredient, setIngredient] = useState('');
-    // console.log(ingredient)
+
     const handleMark = (e) => {
         toast('Added in Favouirte.');
 
@@ -56,9 +55,6 @@ const Recipe = () => {
             <section className='mt-5 grid md:grid-cols-3 px-10 gap-y-5'>
                 {
                     recipeDetails && recipeDetails.map(n => <div>
-                        {/* {
-                            setIngredient(n.method ? n.method : '')
-                        } */}
                         <Card style={{ width: '18rem' }}>
                             <Card.Img variant="top" src={n.pictuer} />
                             <Card.Body>
