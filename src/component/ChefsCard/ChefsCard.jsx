@@ -15,31 +15,34 @@ const ChefsCard = () => {
 
     return (
 
+        <div>
+            <h1 className='text-center m-5'>Our chef</h1>
+            <div className='grid md:grid-cols-3 px-10 gap-y-5'>
 
-        <div className='grid md:grid-cols-3 px-10 gap-y-5'>
-            {
-                chefs.map(chef => <div
-                    key={chef.id}
-                >
-                    <Card style={{ width: '18rem' }}>
-                        <LazyLoad>
-                            <Card.Img variant="top" src={chef.ChefPicture} />
-                        </LazyLoad>
-                        <Card.Body>
-                            <Card.Title>{chef.ChefName}</Card.Title>
-                            <Card.Text>
-                                <p>Experiencec: {chef.YearsOfExperience} years</p>
-                                <p>Number of Recipes: {chef.NumbersOfRecipes}</p>
-                                <p> Likes: {chef.Likes}</p>
-                            </Card.Text>
-                            <Link to={`/recipe/${chef.id}`}>
-                                <Button className='w-100' variant='primary'>View Recipe</Button>
-                            </Link>
-                        </Card.Body>
-                    </Card>
+                {
+                    chefs.map(chef => <div
+                        key={chef.id}
+                    >
+                        <Card style={{ width: '18rem' }}>
+                            <LazyLoad>
+                                <Card.Img variant="top" src={chef.ChefPicture} />
+                            </LazyLoad>
+                            <Card.Body>
+                                <Card.Title>{chef.ChefName}</Card.Title>
+                                <Card.Text>
+                                    <p>Experiencec: {chef.YearsOfExperience} years</p>
+                                    <p>Number of Recipes: {chef.NumbersOfRecipes}</p>
+                                    <p> Likes: {chef.Likes}</p>
+                                </Card.Text>
+                                <Link to={`/recipe/${chef.id}`}>
+                                    <Button className='w-100' variant='primary'>View Recipe</Button>
+                                </Link>
+                            </Card.Body>
+                        </Card>
 
-                </div>)
-            }
+                    </div>)
+                }
+            </div>
         </div>
     );
 };

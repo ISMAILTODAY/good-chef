@@ -19,7 +19,7 @@ const NavigationBar = () => {
         <div>
             <Navbar className='position-fixed nav top-0 w-100' bg="primary" variant="dark">
                 <Container>
-                    <Navbar.Brand href="#home">Good Chef</Navbar.Brand>
+                    <Navbar.Brand href="#home"><span className='band '>G</span>ood  <span className='band'>C</span>hef</Navbar.Brand>
                     <Nav className="me-auto">
                         <Nav.Link href="/" className={({ isActive, }) =>
                             isActive ? "active" : ""

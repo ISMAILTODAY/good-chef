@@ -5,6 +5,8 @@ import ChefsCard from '../ChefsCard/ChefsCard';
 import NavigationBar from '../NavigationBar/NavigationBar';
 import { useContext } from 'react';
 import { contextProvider } from '../../ContextProvider/ContextProvider';
+import Services from '../Services/Services';
+import Contractus from '../Contractus/Contractus';
 
 const Home = () => {
     const { loading } = useContext(contextProvider);
@@ -25,6 +27,10 @@ const Home = () => {
                 <Image src='./../../../public/image/chinese-food.png' className='banner-img mt-5'></Image>
             </div>
             <ChefsCard></ChefsCard>
+            <section>
+                <Services></Services>
+                <Contractus></Contractus>
+            </section>
 
         </div >
     );

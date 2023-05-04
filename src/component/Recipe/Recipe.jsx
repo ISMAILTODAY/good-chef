@@ -3,6 +3,8 @@ import { Button, Card, CardGroup } from 'react-bootstrap';
 import { Link, useParams } from 'react-router-dom';
 import toast, { Toaster } from 'react-hot-toast';
 import LazyLoad from 'react-lazyload';
+import { FaStar } from "react-icons/fa";
+import Rating from 'react-rating';
 
 const Recipe = () => {
     const { id } = useParams()
@@ -25,8 +27,9 @@ const Recipe = () => {
     }
     // const [ingredient, setIngredient] = useState('');
     // console.log(ingredient)
-    const handleMark = () => {
+    const handleMark = (e) => {
         toast('Added in Favouirte.');
+
     }
 
     return (
@@ -77,9 +80,15 @@ const Recipe = () => {
                                         </div>)
                                     }
                                     <p>{isNan ? n.method.slice(0, 50) : n.method}... <Link onClick={isTure}>See More</Link> </p>
+                                    <p>Rating: <Rating
+                                        placeholderSymbol={<FaStar className='text-primary'></FaStar>}
+                                        emptySymbol={<FaStar></FaStar>}
+                                        fullSymbol={<FaStar></FaStar>}
+
+                                    ></Rating></p>
                                 </Card.Text>
                                 <Link>
-                                    <Button onClick={handleMark} className='w-100' variant='primary'>Favouirte</Button>
+                                    <Button onClick={handleMark} className='w-100 ' variant='primary'>Favouirte</Button>
                                     <Toaster></Toaster>
                                 </Link>
                             </Card.Body>
