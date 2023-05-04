@@ -1,0 +1,26 @@
+[
+    {
+        "id": "6433390c00c8248a846f149b",
+        "CategoryLogo": "./ImageSource/Icons/accounts1.png",
+        "CategoryName": "Account & Finance",
+        "JobsAvailable": "300 Jobs Available"
+    },
+    {
+        "id": "6433390cca27e668e845bbe0",
+        "CategoryLogo": "./ImageSource/Icons/business1.png",
+        "CategoryName": "Creative",
+        "JobsAvailable": "100+ Jobs Available"
+    },
+    {
+        "id": "6433390c1da1cb2bb3c71eb8",
+        "CategoryLogo": "./ImageSource/Icons/social.png",
+        "CategoryName": "Marketing & Sales",
+        "JobsAvailable": "150 Jobs Available"
+    },
+    {
+        "id": "6433390c24e5ab077c605e78",
+        "CategoryLogo": "./ImageSource/Icons/social.png",
+        "CategoryName": "Engineering",
+        "JobsAvailable": "350 Jobs Available"
+    }
+]

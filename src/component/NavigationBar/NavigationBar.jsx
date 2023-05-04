@@ -1,17 +1,44 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Button, Container, Image, Nav, NavLink, Navbar } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import { contextProvider } from '../../ContextProvider/ContextProvider';
+import './Navigation.css'
 
 const NavigationBar = () => {
+    const { user, handleLogOut } = useContext(contextProvider);
+
+    const logOut = () => {
+        handleLogOut()
+            .then()
+            .catch(error => {
+                console.log(error)
+            })
+    }
+
     return (
         <div>
-            <div className=' bg-black text-zinc-50 px-10 flex justify-between items-center'>
-                <h1 className='text-3xl font-semibold'><span className='text-[#ff55c2] ' >G</span>ood <span className='text-[#ff55c2] ' >C</span>hef</h1>
-                <ul className='flex items-center  gap-10'>
-                    <li>Home</li>
-                    <li>Blog</li>
-                    <li><img className='rounded-full w-[50px]' src="https://cdn-edcnk.nitrocdn.com/PSaIWXjqkelWPpnJnijqymZXwpeyImuQ/assets/images/optimized/rev-0fc88f9/wp-content/uploads/2021/10/Being-Simple.jpg" alt="" /></li>
-                    <li><button>Login</button></li>
-                </ul>
-            </div>
+            <Navbar className='position-fixed nav top-0 w-100' bg="primary" variant="dark">
+                <Container>
+                    <Navbar.Brand href="#home">Good Chef</Navbar.Brand>
+                    <Nav className="me-auto">
+                        <Nav.Link href="/" className={({ isActive, }) =>
+                            isActive ? "active" : ""
+                        }>Home</Nav.Link>
+                        <Nav.Link href="/blog">Bolg</Nav.Link>
+                        {
+                            user ? <Button onClick={logOut}>LogOut</Button> : <Link to='/login'><Button>Login</Button></Link>
+
+
+                        }
+                    </Nav>
+
+                </Container>
+                {
+                    user && <Image className='me-auto rounded-circle img' src={user?.photoURL} title={user?.displayName} ></Image>
+                }
+                <p>{ }</p>
+            </Navbar>
+
         </div>
     );
 };

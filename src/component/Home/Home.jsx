@@ -1,22 +1,32 @@
-import React from 'react';
+
+import { Image, Spinner } from 'react-bootstrap';
+import './Home.css'
+import ChefsCard from '../ChefsCard/ChefsCard';
+import NavigationBar from '../NavigationBar/NavigationBar';
+import { useContext } from 'react';
+import { contextProvider } from '../../ContextProvider/ContextProvider';
 
 const Home = () => {
-    return (
-        <div className=' bg-[#a7dbd8] '>
-            <div className='p-10 flex items-center justify-evenly '>
-                <h1 className='text-5xl font-bold'>
-                    <h1 className='mb-5 ml-[-100px]'>
-                        <span className='text-[#ff55c2]'>Good</span>
-                        food is the</h1>
-                    <span className='text-[#ff55c2]'>foundation</span>
-                    of <h1 className='mt-5 ml-[100px]'>genuine <span className='text-[#ff55c2]'>
-                        happiness</span>
-                    </h1>
-                </h1>
-                <img className='w-[40%] rounded-lg shadow-lg' src="./../../../public/image/chinese-food.png" alt="" />
-            </div>
+    const { loading } = useContext(contextProvider);
+    if (loading) {
+        return <Spinner className='position-absolute top-50 start-50' animation="border" variant="danger" />
+    }
 
-        </div>
+    return (
+
+        < div >
+            <div className='d-flex justify-content-evenly align-items-center p-5'>
+                <div>
+                    <h1 className='title'><span className='title-gd'>Good</span> food is the</h1>
+                    <h1 className='title-gd'>foundation</h1>
+                    <h1 className='sub-title'><span className='title-gd' >genuine</span> happiness</h1>
+
+                </div>
+                <Image src='./../../../public/image/chinese-food.png' className='banner-img mt-5'></Image>
+            </div>
+            <ChefsCard></ChefsCard>
+
+        </div >
     );
 };
 

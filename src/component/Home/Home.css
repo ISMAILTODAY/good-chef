@@ -1,0 +1,18 @@
+
+.banner-img {
+    width: 40%;
+    border-radius: 20px;
+}
+
+.title {
+
+    margin-left: -100px;
+}
+
+.sub-title {
+    margin-left: 100px;
+}
+
+.title-gd {
+    color: #ff55c2;
+}

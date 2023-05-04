@@ -1,0 +1,11 @@
+.nav {
+    z-index: 1000;
+}
+
+.img {
+    width: 50px;
+}
+
+.active {
+    color: red;
+}

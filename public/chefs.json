@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "ChefPicture": "https://example.com/chef1.png",
+        "ChefName": "Ming Tsai",
+        "YearsOfExperience": 25,
+        "NumbersOfRecipes": 50,
+        "Likes": 1000
+    },
+    {
+        "id": 2,
+        "ChefPicture": "https://example.com/chef2.png",
+        "ChefName": "Martin Yan",
+        "YearsOfExperience": 30,
+        "NumbersOfRecipes": 75,
+        "Likes": 1500
+    },
+    {
+        "id": 3,
+        "ChefPicture": "https://example.com/chef3.png",
+        "ChefName": "Ching He Huang",
+        "YearsOfExperience": 15,
+        "NumbersOfRecipes": 30,
+        "Likes": 500
+    },
+    {
+        "id": 4,
+        "ChefPicture": "https://example.com/chef4.png",
+        "ChefName": "Ken Hom",
+        "YearsOfExperience": 40,
+        "NumbersOfRecipes": 100,
+        "Likes": 2000
+    },
+    {
+        "id": 5,
+        "ChefPicture": "https://example.com/chef5.png",
+        "ChefName": "Grace Young",
+        "YearsOfExperience": 20,
+        "Numbers of recipes": 40,
+        "Likes": 800
+    },
+    {
+        "id": 6,
+        "ChefPicture": "https://example.com/chef6.png",
+        "ChefName": "Martin Yan",
+        "YearsOfExperience": 30,
+        "NumbersOfRecipes": 75,
+        "Likes": 1500
+    }
+]
